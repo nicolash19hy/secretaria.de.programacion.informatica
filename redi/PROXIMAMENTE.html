@@ -1,0 +1,94 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PROXIMAMENTE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../logoo.png">
+  <style>
+    body {
+    font-family: 'Orbitron', sans-serif;
+}
+.container {
+  background-image: linear-gradient(#051327, #000);
+  inset: 0;
+  position: fixed;
+}
+
+.space {
+  --size: 2px;
+  --space-layer: 
+    4vw 50vh 0 #fff,
+    18vw 88vh 0 #fff,
+    73vw 14vh 0 #fff;
+  
+  width: var(--size);
+  height: var(--size);
+  background: white;
+  box-shadow: var(--space-layer);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.75;
+}
+
+.space {
+   animation: move var(--duration) linear infinite;
+}
+#proximamente {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    color: white;
+    z-index: 9999;
+    pointer-events: none;
+    font-family: 'Orbitron', sans-serif;
+    animation: zoomBounce 1.5s ease-out;
+  }
+
+  @media (max-width: 768px) {
+    #proximamente {
+      font-size: 2rem;
+    }
+  }
+@keyframes move {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100vh); }
+}
+  </style>
+</head>
+<body>
+<div class="container">
+   <div class="space space-1"></div>
+   <div class="space space-2"></div>
+   <div class="space space-3"></div>
+</div>
+<script>
+  const COLORS = ["#fff2", "#fff4", "#fff7", "#fffc"];
+
+const generateSpaceLayer = (size, selector, totalStars, duration) => {
+  const layer = [];
+  for (let i = 0; i < totalStars; i++) {
+    const color = COLORS[~~(Math.random() * COLORS.length)];
+    const x = Math.floor(Math.random() * 100);
+    const y = Math.floor(Math.random() * 100);
+    layer.push(`${x}vw ${y}vh 0 ${color}, ${x}vw ${y + 100}vh 0 ${color}`);
+  }
+  const container = document.querySelector(selector);
+  container.style.setProperty("--size", size);
+  container.style.setProperty("--duration", duration);
+  container.style.setProperty("--space-layer", layer.join(","));
+}
+
+generateSpaceLayer("2px", ".space-1", 250, "25s");
+generateSpaceLayer("3px", ".space-2", 100, "20s");
+generateSpaceLayer("6px", ".space-3", 25, "15s");
+</script>
+<div id="proximamente">
+  PRÓXIMAMENTE
+</div>
+
+</body>
+</html>

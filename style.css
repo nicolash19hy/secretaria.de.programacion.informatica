@@ -1,0 +1,146 @@
+ :root {
+      --primary-color: #007bff;
+      --background-color: #f9f5f0;
+      --dark-color: #151515;
+    }
+
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      padding-top: 70px;
+     font-family: "Bungee", sans-serif;    }
+    .navbar {
+      background-color:#0080FF;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+    }
+    .navbar-brand, .nav-link {
+      color: white !important;
+    }
+
+    .video-banner {
+      position: relative;
+      height: 30rem; /* Altura del banner */
+      overflow: hidden;
+    }
+    .video-banner video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+
+    }
+    .content-banner {
+      position: relative;
+      z-index: 2;
+      max-width: 90rem;
+      margin: 0 auto;
+      padding: 10rem 0; /* Altura reducida */
+      text-align: center;
+      
+    }
+    .content-banner::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      z-index: 1;
+    }
+    .content-banner p {
+     
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .content-banner h2 {
+      color: #fff;
+      font-size: 3.5rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    .content-banner a {
+      margin-top: 2rem;
+      text-decoration: none;
+      color: #fff;
+      background-color: var(--primary-color);
+      display: inline-block;
+      padding: 1rem 3rem;
+      text-transform: uppercase;
+      border-radius: 3rem;
+    }
+    .card {
+      transition: transform 0.3s;
+      background-color: #1a1a1a;
+      color: #ffffff;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    #calendario, #objetivo {
+      background-color: #1a1a1a;
+      padding: 50px;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #007bff;
+      width: 100%;
+      color: white;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    #inscripcion h2 {
+      text-align: center;
+    }
+    .btn-primary {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+    .btn-primary:hover {
+      background-color: #004080;
+      border-color: #004080;
+    }
+    .text-white {
+      color: #ffffff !important;
+    }
+    @media (max-width: 768px) {
+  .video-banner {
+    height: 20rem; /* Altura más baja para celular */
+  }
+
+
+  .video-banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+  }
+
+  .content-banner {
+    padding: 4rem 1rem;
+  }
+
+  .content-banner h2 {
+    font-size: 2.5rem;
+  }
+
+  .content-banner a {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+ @media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 17px;
+
+}
+}
