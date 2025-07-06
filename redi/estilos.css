@@ -1,4 +1,4 @@
-:root {
+    :root {
   --primary-color: #007bff;
   --background-dark: #000000;
   --text-light: #ffffff;
@@ -19,28 +19,45 @@ body {
 main {
   flex: 1;
   font-size: 1.2rem;
+  padding-top: 80px;
 }
 
-header {
-  background-color: var(--primary-color);
+.navbar {
+ background-color:#0080FF;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ z-index: 1000;
+
+    }
+.navbar-brand, .nav-link {
+  color: white !important;
+    }
+
+
+.tot {
   color: white;
   padding: 2rem 1rem;
   text-align: center;
 }
 
+
 .media-wrapper {
-  width: 100%;
+  width: 45%;
   height: auto;
   border-radius: 15px;
   overflow: hidden;
 }
 
 .media-wrapper img {
-  width: 100%;
+  max-width: 100%;
+  width: 300px; 
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   border-radius: 15px;
+  margin: 0 auto;
 }
 
 .card {
@@ -62,4 +79,50 @@ footer a:hover {
 
 hr.border-white {
   border-top: 1px solid white;
+}
+@media (max-width: 767px) {
+  .media-wrapper {
+    margin-bottom: 1.5rem;
+    margin-left: 120px; /* esto sí la mueve visualmente a la derecha */
+  }
+
+  .media-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .col-md-6.d-flex.align-items-center {
+    padding-top: 1rem;          /* espacio arriba del texto */
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .tot h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding-top: 100px;
+  }
+
+  form input,
+  form button {
+    font-size: 1rem;
+  }
+
+  h2.section-title {
+    font-size: 1.4rem;
+  }
+
+  .card h4 {
+    font-size: 1.2rem;
+  }
+
+  footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
 }
