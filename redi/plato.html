@@ -11,18 +11,35 @@
   <link rel="icon" type="image/png" href="../logoo.png">
 </head>
 <body>
-
 <main>
   <header>
-    <h1>Torneo de Plato</h1>
-    <p>¡Mostrá tus habilidades y representá a la Secretaría de Programación!</p>
-  </header>
+  <nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">Secretaría de Programación</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+ 
+        <li class="nav-item"><a class="nav-link" href="index.html">Torneos</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Calendario</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Noticias</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+  <div class="tot">
+    <h1>Torneo de Rocket League</h1>
+  </div>
 
   <div class="container my-5">
     <div class="row mb-4">
       <div class="col-md-6">
         <div class="media-wrapper">
-          <img src="../10.jpg" alt="Imagen del torneo de palto" class="img-fluid rounded-3 w-100">
+          <img src="rl.png" alt="Imagen del torneo de palto" class="img-fluid rounded-3 w-100">
         </div>
       </div>
       <div class="col-md-6 d-flex align-items-center">
@@ -30,10 +47,10 @@
           <h3>Detalles del Torneo</h3>
           <ul class="list-unstyled">
             <li>📅 Fecha: 2 de Mayo</li>
-            <li>🎮 Juego: Plato</li>
+            <li>🎮 Juego: Rocket League </li>
             <li>👥 Modo: Diferentes modos hasta que quede uno en pie</li>
             <li>🏆 Premios:  Trofeos, periféricos y dinero</li>
-            <li>💸 Costo de entrada: $1000 c/u</li>
+            <li>💸 Costo de entrada: $1500</li>
           </ul>
         </div>
       </div>
@@ -41,46 +58,69 @@
   </div>
 
 <section id="inscripcion" class="container my-5">
-  <h2 class="section-title text-center">Inscribite al Torneo de Plato</h2>
-  <form id="formularioInscripcion" class="mx-auto" style="max-width: 600px;">
-    
-    <div class="mb-3">
-      <input type="text" name="nombre_equipo" placeholder="Nombre del equipo (opcional)" class="form-control">
+  <h2 class="section-title text-center mb-4">Inscribite al Torneo de Rocket League</h2>
+  <form id="formularioInscripcion" class="mx-auto" style="max-width: 700px;">
+
+    <div class="mb-4">
+      <input type="text" name="nombre_equipo" placeholder="Nombre del equipo" class="form-control">
     </div>
 
-    <h4 class="mt-4">Integrante 1</h4>
-    <div class="mb-3">
-      <input type="text" name="nombre_completo_1" placeholder="Nombre completo" class="form-control" required>
-    </div>
-    <div class="mb-3">
-      <input type="text" name="curso_1" placeholder="Curso (por ejemplo: 6° 6°)" class="form-control" required>
-    </div>
-    <div class="mb-3">
-      <input type="text" name="dni_1" placeholder="DNI" class="form-control" pattern="\d{1,8}" maxlength="8" required>
-    </div>
-    <div class="mb-3">
-      <input type="text" name="id_plato_1" placeholder="Nombre o ID de cuenta de Plato" class="form-control" required>
-    </div>
-    <div class="mb-3">
-      <input type="email" name="correo_1" placeholder="Correo electrónico" class="form-control" required>
+    <div class="card p-4 mb-4">
+      <h4 class="mb-3">Integrante 1</h4>
+
+      <div class="mb-3">
+        <input type="text" name="nombre_completo_1" placeholder="Nombre completo" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <input type="text" name="curso_1" placeholder="Curso (por ejemplo: 6° 6°)" class="form-control" required>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" name="dni_1" placeholder="DNI" class="form-control" pattern="\d{1,8}" maxlength="8" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="tel" name="numero_1" placeholder="Número telefónico" class="form-control" pattern="\d{7,15}" inputmode="numeric" required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <input type="text" name="id_1" placeholder="ID de cuenta de Rocket League" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <input type="text" name="id_dis_1" placeholder="ID de Discord (opcional)" class="form-control" required>
+      </div>
     </div>
 
-    <h4 class="mt-4">Integrante 2</h4>
-    <div class="mb-3">
-      <input type="text" name="nombre_completo_2" placeholder="Nombre completo" class="form-control" required>
+    <div class="card p-4 mb-4">
+      <h4 class="mb-3">Integrante 2</h4>
+
+      <div class="mb-3">
+        <input type="text" name="nombre_completo_2" placeholder="Nombre completo" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <input type="text" name="curso_2" placeholder="Curso (por ejemplo: 6° 6°)" class="form-control" required>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" name="dni_2" placeholder="DNI" class="form-control" pattern="\d{1,8}" maxlength="8" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="tel" name="numero_2" placeholder="Número telefónico" class="form-control" pattern="\d{7,15}" inputmode="numeric" required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <input type="text" name="id_2" placeholder="ID de cuenta de Rocket League" class="form-control" required>
+      </div>
+          <div class="mb-3">
+        <input type="text" name="id_dis_2" placeholder="ID de Discord (opcional)" class="form-control" required>
+      </div> 
     </div>
-    <div class="mb-3">
-      <input type="text" name="curso_2" placeholder="Curso (por ejemplo: 6° 6°)" class="form-control" required>
-    </div>
-    <div class="mb-3">
-      <input type="text" name="dni_2" placeholder="DNI" class="form-control" pattern="\d{1,8}" maxlength="8" required>
-    </div>
-    <div class="mb-3">
-      <input type="text" name="id_plato_2" placeholder="Nombre o ID de cuenta de Plato" class="form-control" required>
-    </div>
-    <div class="mb-3">
-      <input type="email" name="correo_2" placeholder="Correo electrónico" class="form-control" required>
-    </div>
+
 
     <div class="text-center">
       <button type="submit" class="btn btn-primary px-4">Enviar inscripción</button>
