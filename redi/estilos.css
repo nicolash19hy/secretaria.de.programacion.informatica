@@ -83,7 +83,7 @@ hr.border-white {
 @media (max-width: 767px) {
   .media-wrapper {
     margin-bottom: 1.5rem;
-    margin-left: 120px; /* esto sí la mueve visualmente a la derecha */
+    margin-left: 100px; /* esto sí la mueve visualmente a la derecha */
   }
 
   .media-wrapper img {
